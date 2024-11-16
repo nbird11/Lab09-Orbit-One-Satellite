@@ -20,33 +20,10 @@
 using namespace std;
 
 #define PI           3.14159265358979
-#define RADIUS_EARTH 6378000.0       // m
 #define GRAVITY_SEA  9.80665         // m/s^2
 #define ORBITAL_VEL  3100            // m/s
 
-/**
- * Gravity at Height
- */
-double gravityAtHeight(double h)
-{
-   return GRAVITY_SEA * (RADIUS_EARTH / (RADIUS_EARTH + h)) * (RADIUS_EARTH / (RADIUS_EARTH + h));
-}
 
-/**
- * Height Above the Earth
- */
-double heightAboveEarth(const Position& pos)
-{
-   return sqrt(pos.getMetersX() * pos.getMetersX() + pos.getMetersY() * pos.getMetersY()) - RADIUS_EARTH;
-}
-
-/**
- * Direction of earth's pull of gravity
- */
-double directionOfPull(const Position& pos)
-{
-   return atan2(0 - pos.getMetersX(), 0 - pos.getMetersY());
-}
 
 /**
  * Motion with Constant Change
