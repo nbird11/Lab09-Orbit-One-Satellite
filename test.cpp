@@ -9,11 +9,14 @@
 
 #include "test.h"
 #include "testPosition.h"
+#include "testVelocity.h"
+#include "testAcceleration.h"
+#include "testAngle.h"
 
 #ifdef _WIN32
-#include <windows.h>
-#include <iostream>
-using namespace std;
+  #include <windows.h>
+  #include <iostream>
+  using namespace std;
 #endif
 
 /*****************************************************************
@@ -30,4 +33,7 @@ void testRunner()
 #endif // _WIN32
 
    TestPosition().run();
+   TestVelocity().run();
+   TestAcceleration().run();
+   TestAngle().run();
 }

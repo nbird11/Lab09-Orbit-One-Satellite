@@ -1,21 +1,21 @@
 /*************************************************************
  * 1. Name:
- *      Demo
+ *      Nathan Bird, Jared Davey, Brock Hoskins
  * 2. Assignment Name:
- *      Lab 07: Orbit Simulator
+ *      Lab 09: Orbit Simulator
  * 3. Assignment Description:
- *      Simulate satellites orbiting the earth
+ *      Implement the code and unit tests for one Satellite.
  * 4. What was the hardest part? Be as specific as possible.
  *      ??
  * 5. How long did it take for you to complete the assignment?
  *      ??
  *****************************************************************/
 
-#include <cassert>      // for ASSERT
-#include "uiInteract.h" // for INTERFACE
-#include "uiDraw.h"     // for RANDOM and DRAW*
-#include "position.h"   // for POINT
+#include "position.h"   // for POSITION
 #include "test.h"
+#include "uiDraw.h"     // for RANDOM and DRAW*
+#include "uiInteract.h" // for INTERFACE
+#include <cassert>      // for ASSERT
 #include <cmath>
 using namespace std;
 
