@@ -9,11 +9,11 @@
 
 #pragma once
 
- // for unit tests
+// for unit tests
 class TestPosition;
 class TestVelocity;
 class TestAcceleration;
-class TestProjectile;
+class TestSatellite;
 
 // for add()
 class Acceleration;
@@ -28,12 +28,12 @@ class Velocity
    // for unit tests
    friend TestPosition;
    friend TestVelocity;
-   friend TestProjectile;
+   friend TestSatellite;
 
 
 public:
    // constructors
-   Velocity() : dx(0), dy(0) { }
+   Velocity() : dx(0.0), dy(0.0) { }
    Velocity(double dx, double dy) : dx(dx), dy(dy) { }
 
    // getters

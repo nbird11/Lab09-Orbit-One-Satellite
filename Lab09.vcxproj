@@ -131,7 +131,10 @@
     <ClCompile Include="angle.cpp" />
     <ClCompile Include="Lab09.cpp" />
     <ClCompile Include="position.cpp" />
+    <ClCompile Include="satellite.cpp" />
+    <ClCompile Include="satelliteGPS.cpp" />
     <ClCompile Include="test.cpp" />
+    <ClCompile Include="testSatellite.cpp" />
     <ClCompile Include="uiDraw.cpp" />
     <ClCompile Include="uiInteract.cpp" />
     <ClCompile Include="velocity.cpp" />
@@ -140,10 +143,13 @@
     <ClInclude Include="acceleration.h" />
     <ClInclude Include="angle.h" />
     <ClInclude Include="position.h" />
+    <ClInclude Include="satellite.h" />
+    <ClInclude Include="satelliteGPS.h" />
     <ClInclude Include="test.h" />
     <ClInclude Include="testAcceleration.h" />
     <ClInclude Include="testAngle.h" />
     <ClInclude Include="testPosition.h" />
+    <ClInclude Include="testSatellite.h" />
     <ClInclude Include="testVelocity.h" />
     <ClInclude Include="uiDraw.h" />
     <ClInclude Include="uiInteract.h" />

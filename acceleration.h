@@ -32,6 +32,7 @@ public:
    // constructors
    Acceleration() : ddx(0.0), ddy(0.0) { }
    Acceleration(double ddx, double ddy) : ddx(ddx), ddy(ddy) { }
+   Acceleration(const Angle& a, double magnitude) : Acceleration() { set(a, magnitude); }
 
    // getters
    double getDDX()   const { return ddx; }

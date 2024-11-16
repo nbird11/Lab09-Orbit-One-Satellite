@@ -7,6 +7,7 @@
  *    The base class for all orbital objects
  ************************************************************************/
 
+#include "acceleration.h"
 #include "angle.h"
 #include "position.h"
 #include "satellite.h"
@@ -16,8 +17,7 @@
 constexpr double RADIUS_EARTH = 6378000.0;  // meters
 constexpr double GRAVITY_SEA = 9.80665;     // meters/second^2
 
-
-Satellite::Satellite(const Velocity& velocity, const Position& pos, const Angle& direction, double angularVelocity, double radius) : dead(false)
+Satellite::Satellite(const Position& pos, const Velocity& velocity, const Angle& direction, double angularVelocity, double radius) : dead(false)
 {
    this->velocity = velocity;
    this->pos = pos;
@@ -26,9 +26,10 @@ Satellite::Satellite(const Velocity& velocity, const Position& pos, const Angle&
    this->radius = radius;
 }
 
-Satellite::Satellite(const Position& pos) : Satellite()
+Satellite::Satellite(const Position& pos, const Velocity& vel) : Satellite()
 {
    this->pos = pos;
+   this->velocity = vel;
 }
 
 Satellite::Satellite(const Satellite& rhs)
@@ -65,15 +66,10 @@ double Satellite::directionOfPull() const
 
 void Satellite::move(double deltaTime)
 {
-   double a = getGravity();
+   Acceleration acceleration(direction, getGravity());
 
-   double angle = directionOfPull();  // direction in radians
-   double ddx = a * sin(angle);
-   double ddy = a * cos(angle);
+   velocity.add(acceleration, deltaTime);
+   pos.add(velocity, acceleration, deltaTime);
 
-   pDemo->ptGPS.setDX(motionConstantChange(pDemo->ptGPS.getDX(), ddx, tpf));
-   pDemo->ptGPS.setDY(motionConstantChange(pDemo->ptGPS.getDY(), ddy, tpf));
-
-   pDemo->ptGPS.setMetersX(distance(pDemo->ptGPS.getMetersX(), pDemo->ptGPS.getDX(), ddx, tpf));
-   pDemo->ptGPS.setMetersY(distance(pDemo->ptGPS.getMetersY(), pDemo->ptGPS.getDY(), ddy, tpf));
+   direction.add(angularVelocity);
 }

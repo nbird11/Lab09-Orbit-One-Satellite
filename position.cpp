@@ -7,8 +7,10 @@
  *    Everything we need to know about a location on the screen.
  ************************************************************************/
 
+#include "acceleration.h"
 #include "position.h"
-#include <cassert>
+#include "velocity.h"
+#include <iosfwd>
 
 
 Position::Position(double x, double y) : x(0.0), y(0.0)
@@ -26,6 +28,12 @@ Position& Position::operator = (const Position& pt)
    x = pt.x;
    y = pt.y;
    return *this;
+}
+
+void Position::add(const Velocity& v, const Acceleration& a, double time)
+{
+   x += (v.getDX() * time) + ((.5 * a.getDDX()) * (time * time));
+   y += (v.getDY() * time) + ((.5 * a.getDDY()) * (time * time));
 }
 
 /******************************************
