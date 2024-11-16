@@ -2,7 +2,7 @@
  * Header File:
  *    ACCELERATION
  * Author:
- *    Br. Helfrich
+ *    Nathan Bird, Brock Hoskins, Jared Davey
  * Summary:
  *    Everything we need to know about acceleration
  ************************************************************************/
@@ -10,12 +10,12 @@
 
 #pragma once
 
+class Angle;
+
 class TestAcceleration;
 class TestVelocity;
 class TestPosition;
 class TestLander;
-class Angle;
-
 
 /*********************************************
  * Acceleration

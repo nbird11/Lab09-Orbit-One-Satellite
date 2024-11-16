@@ -2,7 +2,7 @@
  * Header File:
  *    Test Position : Test the Position class
  * Author:
- *    Br. Helfrich
+ *    Brock Hoskins, Jared Davey, Nathan Bird
  * Summary:
  *    All the unit tests for Position
  ************************************************************************/

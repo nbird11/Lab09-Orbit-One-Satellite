@@ -2,14 +2,14 @@
  * Source File:
  *    ANGLE
  * Author:
- *    <your name here>
+ *    Nathan Bird, Brock Hoskins, Jared Davey
  * Summary:
  *    Everything we need to know about a direction
  ************************************************************************/
 
 #include "angle.h"
-#include <math.h>  // for floor()
 #include <cassert>
+#include <cmath>
 using namespace std;
 
  /************************************

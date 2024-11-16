@@ -2,7 +2,7 @@
  * Header File:
  *    TEST ACCELERATION
  * Author:
- *    Br. Helfrich
+ *    Brock Hoskins, Jared Davey, Nathan Bird
  * Summary:
  *    Unit tests for the Acceleration class.
  ************************************************************************/

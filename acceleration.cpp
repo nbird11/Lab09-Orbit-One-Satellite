@@ -2,14 +2,13 @@
  * Source File:
  *    ACCELERATION
  * Author:
- *    Br. Helfrich
+ *    Nathan Bird, Brock Hoskins, Jared Davey
  * Summary:
  *    Everything we need to know about changing speed
  ************************************************************************/
 
 #include "acceleration.h"
 #include "angle.h"
-
 #include <cmath>
 
  /*********************************************

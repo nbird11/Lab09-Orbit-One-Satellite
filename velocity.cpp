@@ -7,12 +7,12 @@
  *    Everything we need to know about speed
  ************************************************************************/
 
-#include "velocity.h"
 #include "acceleration.h"
 #include "angle.h"
+#include "velocity.h"
 
-#include <math.h>  // for sqrt()
 #include <cassert>
+#include <cmath>
 
  /*********************************************
   * VELOCITY : ADD

@@ -2,17 +2,16 @@
  * Header File:
  *    Point : The representation of a position 
  * Author:
- *    Br. Helfrich
+ *    Nathan Bird, Brock Hoskins, Jared Davey
  * Summary:
  *    Everything we need to know about a location on the screen
  *    or the location on the field.
  ************************************************************************/
 
-
 #pragma once
 
-#include <iostream> 
 #include <cmath>
+#include <iosfwd>
 
 class TestPosition;
 class Acceleration;

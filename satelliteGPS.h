@@ -18,6 +18,10 @@ class Position;
 class Velocity;
 class ogstream;
 
+/***************************************************
+ * GPS
+ * The GPS type derived from Satellite
+ ***************************************************/
 class GPS : public Satellite
 {
 public:

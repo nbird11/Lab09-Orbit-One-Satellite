@@ -8,11 +8,12 @@
  ************************************************************************/
 
 #include "test.h"
-#include "testPosition.h"
-#include "testVelocity.h"
 #include "testAcceleration.h"
 #include "testAngle.h"
+#include "testPosition.h"
 #include "testSatellite.h"
+#include "testSatelliteGPS.h"
+#include "testVelocity.h"
 
 #ifdef _WIN32
   #include <windows.h>
@@ -38,4 +39,5 @@ void testRunner()
    TestAcceleration().run();
    TestAngle().run();
    TestSatellite().run();
+   TestGPS().run();
 }

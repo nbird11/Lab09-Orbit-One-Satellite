@@ -16,10 +16,11 @@
 #include "velocity.h"
 
  /*****************************************************************
- *****************************************************************
- * GETTERS
- *****************************************************************
- *****************************************************************/
+  *****************************************************************
+  * GETTERS
+  *****************************************************************
+  *****************************************************************/
+
  /*********************************************
  * name:    IS DEAD
  * input:   dead = True
@@ -240,14 +241,14 @@ void TestSatellite::getSpeed_diagonal()
 /*********************************************
 * name:    GET POSITION of Satellite after moving with no time.
 * input:   move(0)
-* output:  x=0.0, y=0.0
+* output:  x=50,000km, y=50,000km
 *********************************************/
 void TestSatellite::move_noTime()
 {
    // setup
    SatelliteDerived s;
-   s.pos.x = 1.1;
-   s.pos.y = 1.1;
+   s.pos.x = 5000000000.0;
+   s.pos.y = 5000000000.0;
    s.velocity.dx = 30.0;
    s.velocity.dy = 30.0;
    double time = 0;
@@ -259,21 +260,21 @@ void TestSatellite::move_noTime()
    assertEquals(time, 0);
    assertEquals(s.velocity.dx, 30.0);
    assertEquals(s.velocity.dy, 30.0);
-   assertEquals(s.pos.x, 1.1);
-   assertEquals(s.pos.y, 1.1);
+   assertEquals(s.pos.x, 5000000000.0);
+   assertEquals(s.pos.y, 5000000000.0);
 } // teardown
 
 /*********************************************
 * name:    GET POSITION of Satellite after moving with time.
 * input:   move(3)
-* output:  x != 0.0, y != 0.0
+* output:  x != 50,000km, y != 50,000km
 *********************************************/
 void TestSatellite::move_time()
 {
    // setup
    SatelliteDerived s;
-   s.pos.x = 0.0;
-   s.pos.y = 0.0;
+   s.pos.x = 50000000.0;
+   s.pos.y = 50000000.0;
    s.velocity.dx = 30.0;
    s.velocity.dy = 30.0;
    double time = 3;
@@ -283,7 +284,7 @@ void TestSatellite::move_time()
 
    //verify
    assertEquals(time, 3);
-   assertUnit(s.pos.x != 0.0);
-   assertUnit(s.pos.y != 0.0);
+   assertUnit(s.pos.x != 50000000.0);
+   assertUnit(s.pos.y != 50000000.0);
 } // teardown
 

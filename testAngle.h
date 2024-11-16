@@ -2,7 +2,7 @@
  * Header File:
  *    TEST ANGLE
  * Author:
- *    Br. Helfrich
+ *    Brock Hoskins, Jared Davey, Nathan Bird
  * Summary:
  *    All the unit tests for ANGLE
  ************************************************************************/

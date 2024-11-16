@@ -30,7 +30,7 @@ public:
    friend TestGPS;
 
    // Constructors
-   Satellite() : velocity(Velocity()), pos(Position()), direction(Angle()),
+   Satellite() : pos(Position()), velocity(Velocity()), direction(Angle()),
                  angularVelocity(0.0), dead(false), radius(0.0) {}
    Satellite(const Position& pos, const Velocity& vel, const Angle& angle, double angularVel, double radius);
    Satellite(const Position& pos, const Velocity& vel);
@@ -81,30 +81,15 @@ public:
    virtual void input(const Interface* pUI) { assert(false); }
 };
 
+/***************************************************
+ * SATELLITE DUMMY
+ * A dummy Satellite with all methods asserting false
+ ***************************************************/
 class SatelliteDummy : public Satellite
 {
 public:
    SatelliteDummy() : Satellite() { }
    ~SatelliteDummy() { }
-
-   double getRadius()     const { assert(false); return radius;   }
-   Position getPosition() const { assert(false); return pos;      }
-   double   getSpeed()    const { assert(false); return velocity.getSpeed(); }
-   bool isDead()          const { assert(false); return dead;     }
-
-   void kill() { assert(false); }
-
-   virtual void move(double time) { assert(false); }
-   virtual void draw(ogstream& gout) { assert(false); }
-   virtual void destroy(const std::vector<Satellite*>& satellites) { assert(false); }
-   virtual void input(const Interface* pUI) { assert(false); }
-};
-
-class SatelliteStub : public SatelliteDummy
-{
-public:
-   SatelliteStub() : SatelliteDummy() { }
-   ~SatelliteStub() { }
 
    double getRadius()     const { assert(false); return radius;   }
    Position getPosition() const { assert(false); return pos;      }

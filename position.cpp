@@ -2,7 +2,7 @@
  * Source File:
  *    Point : The representation of a position on the screen
  * Author:
- *    Br. Helfrich
+ *    Nathan Bird, Brock Hoskins, Jared Davey
  * Summary:
  *    Everything we need to know about a location on the screen.
  ************************************************************************/
@@ -11,8 +11,12 @@
 #include "position.h"
 #include "velocity.h"
 #include <iosfwd>
+#include <iostream>
 
-
+/******************************************
+ * Position : CONSTURCTOR
+ * Position from x and y
+ *****************************************/
 Position::Position(double x, double y) : x(0.0), y(0.0)
 {
    setMetersX(x);
@@ -20,7 +24,7 @@ Position::Position(double x, double y) : x(0.0), y(0.0)
 }
 
 /******************************************
- * POINT : ASSIGNMENT
+ * Position : ASSIGNMENT
  * Assign a point
  *****************************************/
 Position& Position::operator = (const Position& pt)
@@ -30,6 +34,11 @@ Position& Position::operator = (const Position& pt)
    return *this;
 }
 
+/******************************************
+ * Position : ADD
+ * update position from velocity, acceleration
+ * and time
+ *****************************************/
 void Position::add(const Velocity& v, const Acceleration& a, double time)
 {
    x += (v.getDX() * time) + ((.5 * a.getDDX()) * (time * time));

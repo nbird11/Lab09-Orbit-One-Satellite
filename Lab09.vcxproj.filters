@@ -48,6 +48,9 @@
     <ClCompile Include="satelliteGPS.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="testSatelliteGPS.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="position.h">
@@ -93,6 +96,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="satelliteGPS.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="testSatelliteGPS.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
